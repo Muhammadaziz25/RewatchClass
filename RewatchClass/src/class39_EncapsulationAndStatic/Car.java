@@ -4,32 +4,34 @@ import java.awt.Color;
 
 public class Car {
 	/*
-	 * Variables: 
-	 * 2. Instance variable: year, model
-	 * 3. Static variable: counter>>0, companyName  >> final
-	 * 
-	 * Instance methods: getYear(), getColor(), accelerate(int speed), decelerate(int speed)
-	 * Static methods: getCounter(), getCompanyName()
+	 * 1.Variables: instance variables: year, color static variables: counter,
+	 * companyName==final,
+	 *  2.Constructors: no-arg constructors constructor that sets values year and color 
+	 * 2.Instance methods: getYear(), getColor(),
+	 * accelerate(int speed), decelerate(int speed)
+	 *  Static methods: getCounter(),
+	 * getCompanyName()
 	 */
 
 	int year;
 	int speed;
 	String color;
-	static int counter = 0;
-	static final String companyName = "Mercedes-Benz";
-	
-	
+	public static int counter = -1;
+	public final static String companyName = "Mercedes-Benz";
+
 	public Car() {
-		counter++;
+		counter ++;
+
 	}
-	
+
 	public Car(int year, String color, int speed) {
 
+		this.year = year;
 		this.color = color;
 		this.speed = speed;
-		this.year = year;
 		counter++;
 	}
+	
 	public int getYear() {
 		return year;
 	}
@@ -38,14 +40,11 @@ public class Car {
 		return color;
 	}
 	
-	public void accelerate(int increment) {
+	public void accelerate (int increment) {
 		speed += increment;
 	}
-	
 	public void decelerate(int decrement) {
-
 		speed -= decrement;
-		
 	}
 	
 	public static int getCounter() {
@@ -55,4 +54,5 @@ public class Car {
 	public static String getCompanyName() {
 		return companyName;
 	}
+
 }

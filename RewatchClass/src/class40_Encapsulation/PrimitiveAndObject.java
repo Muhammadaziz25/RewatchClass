@@ -15,8 +15,8 @@ public class PrimitiveAndObject {
 		
 
 		String one, two;
-		one = new String("a");
-		two = new String("b");
+		one = "a";//new String("a");
+		two = "b";//new String("b");
 		System.out.println(one);
 		System.out.println(two);
 		one = two;

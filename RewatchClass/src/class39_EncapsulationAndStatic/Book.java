@@ -7,7 +7,7 @@ package class39_EncapsulationAndStatic;
 public class Book {
 
 	long ISBN;
-	static String type = "Paper-based";
+	static String type	= "Paper-based";
 	
 	
 	public long getISBN() {

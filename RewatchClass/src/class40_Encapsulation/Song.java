@@ -1,5 +1,7 @@
 package class40_Encapsulation;
 
+import java.util.Date;
+
 public class Song {
 
 	/*
@@ -8,7 +10,7 @@ public class Song {
 	 * Static: numberOfSongs
 	 * 
 	 * Constructors:
-	 * a) no-arg
+	 * a) no-arg >>>numberOfSongs++;
 	 * b) all instance Variables
 	 * 
 	 * Methods: a) getter and setter methods
@@ -22,33 +24,31 @@ public class Song {
 	private String genre;
 	private String datePublished;
 	private String publisher;
-	private boolean isVinly;
-	private static int numberOfSongs = 0;
+	private boolean isVinyl;
+	private static int numOfSongs = 0;
 	
 	public Song() {
-		numberOfSongs++;
+		numOfSongs++;
+		
 	}
-	
-	public Song(String name, String artist, String genre, String datePublished, String publisher, boolean isVinly) {
 
+	public Song(String name, String artist, String genre, String datePublished, String publisher, boolean isVinyl) {
 		this.name = name;
 		this.artist = artist;
 		this.genre = genre;
 		this.datePublished = datePublished;
 		this.publisher = publisher;
-		this.isVinly = isVinly;
-		numberOfSongs++;
-		
+		this.isVinyl = isVinyl;
+		numOfSongs++;
 	}
-
+	
 	public String getName() {
 		return name;
 	}
-
+	
 	public void setName(String name) {
 		this.name = name;
 	}
-
 	public String getArtist() {
 		return artist;
 	}
@@ -72,42 +72,41 @@ public class Song {
 	public void setDatePublished(String datePublished) {
 		this.datePublished = datePublished;
 	}
-
+	
 	public String getPublisher() {
 		return publisher;
 	}
-
+	
 	public void setPublisher(String publisher) {
 		this.publisher = publisher;
 	}
 
-	public boolean isVinly() {
-		return isVinly;
+	public boolean isVinyl() {
+		return isVinyl;
 	}
 
-	public void setVinly(boolean isVinly) {
-		this.isVinly = isVinly;
+	public void setVinyl(boolean isVinyl) {
+		this.isVinyl = isVinyl;
 	}
 
-	public static int getNumberOfSongs() {
-		return numberOfSongs;
+	public static int getNumOfSongs() {
+		return numOfSongs;
 	}
 
-	public static void setNumberOfSongs(int numberOfSongs) {
-		Song.numberOfSongs = numberOfSongs;
+	public static void setNumOfSongs(int numOfSongs) {
+		Song.numOfSongs = numOfSongs;
 	}
 
-	@Override
-	public String toString() {
-		return "Song [name=" + name + ", artist=" + artist + ", genre=" + genre + ", datePublished=" + datePublished
-				+ ", publisher=" + publisher + ", isVinly=" + isVinly + "]";
-	}
-	
-	
-	
-	
+//	@Override
 //	public String toString() {
-//		
+//		return "name=" + name + ", artist=" + artist + ", genre=" + genre + ", datePublished=" + datePublished
+//				+ " , publisher=" + publisher + " , isVinyl=" + isVinyl;
 //	}
+	
+	
+	public String toString() {
+		return "name[=" + name + " , artist=" + artist + " , genre=" + genre + ", datePublished" + datePublished + ", publisher= "
+	+ publisher + ", isVinyl=" + isVinyl + "]" ;
+	}
 	
 }

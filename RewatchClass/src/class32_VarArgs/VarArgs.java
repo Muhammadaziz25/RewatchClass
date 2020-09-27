@@ -18,5 +18,7 @@ public class VarArgs {
 	public static void displayArray(int ... arr) {
 		System.out.println(Arrays.toString(arr));
 	}
+	
+	
 
 }
