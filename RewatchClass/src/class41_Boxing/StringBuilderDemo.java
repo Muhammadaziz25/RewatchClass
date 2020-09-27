@@ -26,16 +26,16 @@ public class StringBuilderDemo {
 //		builder.substring(2);  substring doesn't modify StringBuilder object
 //		System.out.println(builder);
 		
-		builder.insert(2, new char[] {'h','i'}, 0, 2);
+		builder.insert(0, new char[] {'h','i','r','e'}, 0, 4);
 		System.out.println(builder);
 		
-//		sohellotext included
-//		index 2 is >>> h
-//		starting point of array is >>> 'w'
-//		2 number of elements >>> 'w', 'e'
-//		result == sowehellotext included
-//		sb.insert(2, new char[] {'w', 'e'}, 0, 2);
-//		System.out.println(sb);
+//		sme life included
+//		index 0 is >>> s
+//		starting point of array is >>> 'h'
+//		2 number of elements >>> 'h','i','r', 'e'
+//		result == hiresme life included
+//		builder.insert(0, new char[] {'h','i','r','e'}, 0, 4);
+//		System.out.println(builder);
 	}
 
 }
