@@ -6,6 +6,8 @@ import java.util.Arrays;
 public class WarmpUpTask {
 
 	public static void main(String[] args) {
+		
+		
 
 		/*
 		 * Write an array of any type, and have value in it

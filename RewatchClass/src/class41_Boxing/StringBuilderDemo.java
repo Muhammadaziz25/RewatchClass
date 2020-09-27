@@ -7,28 +7,35 @@ package class41_Boxing;
 public class StringBuilderDemo {
 	 
 	public static void main(String[] args) {
-		String text = "some text";
+		String str = "some text";
+		StringBuilder builder = new StringBuilder("some text");
+		System.out.println(builder);
 		
-		StringBuilder sb = new StringBuilder("some text");
-		System.out.println(sb);
-		sb.append(" included");
-		System.out.println(sb);
-		sb.delete(2, 5);
-		System.out.println(sb);
-		sb.deleteCharAt(7);
-		System.out.println(sb);
-		sb.insert(2, "hello");
-		System.out.println(sb);
-		sb.replace(11, 12, " i");
-		System.out.println(sb);
+		str.concat(" life");
+		System.out.println(str);
+		builder.append(" life");
+		System.out.println(builder);
+		builder.delete(1, 5);
+		System.out.println(builder);
+		builder.deleteCharAt(2);
+		System.out.println(builder);
+		builder.insert(1, "o");
+		System.out.println(builder);
+		builder.replace(1, 5, "me");
+		System.out.println(builder);
+//		builder.substring(2);  substring doesn't modify StringBuilder object
+//		System.out.println(builder);
+		
+		builder.insert(2, new char[] {'h','i'}, 0, 2);
+		System.out.println(builder);
 		
 //		sohellotext included
 //		index 2 is >>> h
 //		starting point of array is >>> 'w'
 //		2 number of elements >>> 'w', 'e'
 //		result == sowehellotext included
-		sb.insert(2, new char[] {'w', 'e'}, 0, 2);
-		System.out.println(sb);
+//		sb.insert(2, new char[] {'w', 'e'}, 0, 2);
+//		System.out.println(sb);
 	}
 
 }

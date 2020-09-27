@@ -12,50 +12,94 @@ public class MyStringTester {
 	 * like: length(), substring(index), substring(index1, index2)
 	 * concat()
 	 */
+	
 	public static void main(String[] args) {
-		MyString my = new MyString("Good");
-		int stringLength = my.length();
-		System.out.println(stringLength);
-		System.out.println(my.substring(1));
-		System.out.println(my.substring(1,5));
+		MyString my = new MyString("Happy");
+		int myLength = my.length();
+		System.out.println(myLength);
+		System.out.println(my.substring(2));
+		System.out.println(my.substring(1,3));
 	}
-
 }
 
-class MyString {
+class MyString{
 	
-	private String value;
+	private String str;
 	
-	
-	public MyString(String value) {
-		this.value = value;
+	public MyString(String str) {
+		this.str = str;
 	}
 	
 	public int length() {
-		return value.toCharArray().length;
+		return str.toCharArray().length;
 	}
 	
-	public String substring( int index) {
+	public String substring(int index) {
 		String substring = "";
-		for (int i = 0; i < value.length(); i++) {
+		for(int i=0; i<str.length(); i++) {
 			if(i>=index) {
-				substring += value.toCharArray()[i];
+				substring += str.toCharArray()[i];
 			}
 		}
 		return substring;
 	}
 	
-	public String substring( int index1, int index2) {
-		String substring = "";
-		for (int i = 0; i < value.length(); i++) {
-			if(i>=index1 && i<index2) {
-				substring += value.toCharArray()[i];
+	public String substring(int index1, int index2) {
+		String substring ="";
+		for(int i=0; i<str.length(); i++) {
+			if(i>=index1 && i< index2) {
+				substring += str.toCharArray()[i];
 			}
 		}
 		return substring;
 	}
-	
 }
+
+
+
+
+//public static void main(String[] args) {
+//	MyString my = new MyString("Good");
+//	int stringLength = my.length();
+//	System.out.println(stringLength);
+//	System.out.println(my.substring(1));
+//	System.out.println(my.substring(1,5));
+//}
+//
+//}
+//
+//class MyString {
+//
+//private String value;
+//
+//
+//public MyString(String value) {
+//	this.value = value;
+//}
+//
+//public int length() {
+//	return value.toCharArray().length;
+//}
+//
+//public String substring( int index) {
+//	String substring = "";
+//	for (int i = 0; i < value.length(); i++) {
+//		if(i>=index) {
+//			substring += value.toCharArray()[i];
+//		}
+//	}
+//	return substring;
+//}
+//
+//public String substring( int index1, int index2) {
+//	String substring = "";
+//	for (int i = 0; i < value.length(); i++) {
+//		if(i>=index1 && i<index2) {
+//			substring += value.toCharArray()[i];
+//		}
+//	}
+//	return substring;
+//}
 
 
 
